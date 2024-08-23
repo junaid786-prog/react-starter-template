@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import './App.css'
+import Page from "./pages/Page";
 
 const Context = React.createContext({
   name: 'Default',
@@ -14,8 +15,8 @@ function App() {
       <ContextProvider value={{ name: 'App' }}>
         {/* <ErrorBoundary> */}
         <Routes>
-          <Route path="/login" element={<>Hello</>} />
-          <Route path="/register" element={<></>} />
+          <Route path="/" element={<>Hello</>} />
+          <Route path="/page" element={<Page />} />
         </Routes>
         {/* </ErrorBoundary> */}
       </ContextProvider>
